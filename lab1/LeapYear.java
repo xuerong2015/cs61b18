@@ -13,6 +13,15 @@ public class LeapYear {
             System.out.printf("%d is not a leap year.\n", year);
         }
     }
+    /** A leap year is either divisible by 400 or divisible by 4 and not by 100 */
+    public static boolean isLeapYear(int year){
+        boolean leap = false;
+        if (year % 400 ==0 || (year % 4 == 0 && year % 100 != 0)){
+            leap = true;
+        }
+        return leap;
+
+    }
 
     /** Must be provided an integer as a command line argument ARGS. */
     public static void main(String[] args) {
